@@ -25,7 +25,7 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--bg-url);
   height: 100vh;
 }
 
@@ -65,8 +65,7 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-
-  margin: 300px auto 0 auto;
+  margin: 200px auto 0 auto;
 }
 
 #switch button {

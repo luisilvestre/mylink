@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: #0D3046;
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: #F5F5F5;
   --stroke-color: rgba(0, 0, 0, 0.05);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -25,12 +25,14 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  background: var(--bg-url);
+  height: 100%;
 }
 
 body * {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: var(--text-color);
 }
 
@@ -39,6 +41,10 @@ body * {
   max-width: 580px;
   margin: 56px auto 0px;
   padding: 0 24px;
+}
+
+#divider{
+  text-align: center;
 }
 
 #profile {
@@ -59,7 +65,8 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-  margin: 4px auto;
+
+  margin: 300px auto 0 auto;
 }
 
 #switch button {
@@ -73,14 +80,14 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-    animation: slide-out 0.2s;
+  animation: slide-out 0.2s;
 }
 
 .light #switch button {
   animation: slide-in 0.2s forwards;
 }
 
-#switch button:hover{
+#switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
 
@@ -110,7 +117,7 @@ ul li a {
   padding: 16px 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 8px;
+  border-radius: 100px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
@@ -142,21 +149,6 @@ ul li a:hover {
 
 #social-links a:hover {
   background: var(--highlight-color);
-}
-
-footer {
-  padding: 24px 0px;
-  text-align: center;
-  font-size: 14px;
-}
-
-@media (min-width: 700px) {
-  :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
-  }
-  .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-  }
 }
 
 @keyframes slide-in {
